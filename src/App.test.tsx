@@ -20,6 +20,11 @@ describe("App Component", () => {
     const button = screen.getByText(/change message/i);
     fireEvent.click(button);
     screen.getByText(/new message!/i);
+    const oldMessage = screen.queryByText(
+      "Let's learn more about testing in React"
+    );
+    //query não falha o teste
+    expect(oldMessage).not.toBeInTheDocument();
   });
 });
 export default {};
