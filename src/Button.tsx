@@ -10,7 +10,11 @@ export const Button = ({ disabled, children, onClick }: IButton) => {
   return (
     <button
       onClick={() => onClick(10)}
-      style={{ backgroundColor: disabled ? "red" : "blue" }}
+      style={{
+        backgroundColor: disabled ? "red" : "blue",
+        color: "white",
+        padding: 10,
+      }}
     >
       {children}
     </button>
